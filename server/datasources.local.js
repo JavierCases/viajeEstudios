@@ -15,4 +15,19 @@ module.exports = {
     password: process.env.DB_PASSWORD,
     database: 'viajeEstudios',
   }
+  ,
+  myEmailDataSource: {
+    name: "myEmailDataSource",
+    connector: "mail",
+    transports: [{
+    type: "SMTP",
+    host: "smtp.gmail.com",
+    secure: true,
+    port: 465,
+    auth: {
+      user: process.env.EMAIL_USER,
+      pass: process.env.EMAIL_PASSWORD,
+    }
+  }]
+}
 };
